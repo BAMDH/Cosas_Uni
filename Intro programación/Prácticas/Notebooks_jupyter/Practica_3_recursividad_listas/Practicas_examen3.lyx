@@ -1,0 +1,219 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{palatino}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Taller de Introducción a la programación: Practica para el examen 3
+\end_layout
+
+\begin_layout Author
+M.
+ Sc.
+ Saúl Calderón Ramírez 
+\begin_inset Newline newline
+\end_inset
+
+Instituto Tecnológico de Costa Rica, 
+\begin_inset Newline newline
+\end_inset
+
+Area de Ingeniería en Computadores.
+ 
+\end_layout
+
+\begin_layout Abstract
+Los siguientes son un conjunto de ejercicios, formulados como preparación
+ al tercer examen parcial.
+\end_layout
+
+\begin_layout Enumerate
+Escriba una función recursiva y otra iterativa 
+\emph on
+calcularFrecuencias(vector)
+\emph default
+ que reciba un vector conteniendo valores entre 0 y n-1, donde n es el tamaño
+ del vector y obtenga otro vector que indique en cada una de las posiciones
+ la cantidad de veces que apareció ese dígito (el que indica la posición)
+ en el vector de entrada.
+ 
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+>>> calcularFrecuencias([1, 1, 2, 1, 4])
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Un cuadrado semi-mágico es una matriz 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ en la cual todas las filas que la componen suman lo mismo.
+ Por ejemplo, la matriz: [[6, 2, 1], [5, 4, 0], [4, 4, 1]] sería un cuadrado
+ semi-mágico.
+ Escriba una función recursiva 
+\emph on
+esCuadradoSemimagico(matriz)
+\emph default
+ que reciba una matriz y verifique si el argumento dado es o no un cuadrado
+ semi-mágico.
+\end_layout
+
+\begin_layout Enumerate
+Escriba una función iterativa 
+\begin_inset Formula $cambiarRepetidos(lista)$
+\end_inset
+
+ que reciba una lista y sustituya todos los valores repetidos por -1 (salvo
+ la primera ocurrencia del elemento repetido).
+ En caso que no existan elementos repetidos debe mostrar el mensaje “no
+ hay duplicados”.
+ 
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+>>> cambiarRepetidos([1, 2, 5, 3, 1, 5, 1]) [1, 2, 5, 3, -1, -1, -1]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Escribir una función en iteración llamada 
+\emph on
+cambiarDivisorDe4
+\emph default
+, que reciba un número entero y cambie los dígitos que sean un divisor de
+ 4, por un cero.
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+>>> cambiarDivisorDe4(1488)
+\end_layout
+
+\begin_layout Plain Layout
+
+1000 
+\end_layout
+
+\begin_layout Plain Layout
+
+>>> cambiarDivisorDe4(72571)
+\end_layout
+
+\begin_layout Plain Layout
+
+72571 
+\end_layout
+
+\begin_layout Plain Layout
+
+>>> cambiarDivisorDe4(4275) 
+\end_layout
+
+\begin_layout Plain Layout
+
+275
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Programe el algoritmo de ordenamiento burbuja usando programación iterativa.
+\end_layout
+
+\begin_layout Enumerate
+Investigue y programe el algoritmo de ordenamiento heap sort, usando un
+ árbol binario.
+\end_layout
+
+\end_body
+\end_document

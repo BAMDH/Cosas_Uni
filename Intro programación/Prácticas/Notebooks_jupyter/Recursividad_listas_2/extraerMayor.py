@@ -1,0 +1,1 @@
+esPalindromo("PacMan");

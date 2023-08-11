@@ -1,0 +1,1214 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{palatino}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Taller de Introducción a la programación: Practica recursividad
+\end_layout
+
+\begin_layout Author
+M.
+ Sc.
+ Saúl Calderón Ramírez 
+\begin_inset Newline newline
+\end_inset
+
+Instituto Tecnológico de Costa Rica, 
+\begin_inset Newline newline
+\end_inset
+
+Escuela de Computación.
+ 
+\end_layout
+
+\begin_layout Abstract
+Los siguientes son un conjunto de ejercicios recursivos resueltos, tomados
+ del libro en construcción por el Máster Jeff Schmidt Peralta, coordinador
+ de los cursos de introducción a la programación del área de Ing.
+ en computadores, del ITCR.
+\end_layout
+
+\begin_layout Section
+Determinar sin un número tiene ceros (recursividad simple)
+\end_layout
+
+\begin_layout Standard
+El problema a resolver es determinar si un número entero dado, tiene entre
+ sus dígitos al menos un cero.
+ El comportamiento de la ejecución debe ser como se muestra a continuación
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/img1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se definen en primer términos las entradas, salidasy restricciones.
+ En este caso la salida es un valor de verdad.
+ 
+\end_layout
+
+\begin_layout Standard
+Entradas: número 
+\end_layout
+
+\begin_layout Standard
+Salidas: indicador booleano de si el número contiene al menos un cero 
+\end_layout
+
+\begin_layout Standard
+Restricciones: número entero.
+\end_layout
+
+\begin_layout Standard
+El algoritmo se basa en descomponer el número de entrada, por medio de las
+ funciones de obtener el último dígito y eliminar el último dígito.
+ Cada dígito es analizado y si existe un cero, se debe terminar retornando
+ un valor de verdadero.
+ En caso que todos los dígitos sean revisados y no exista un cero, se retorna
+ un valor de cero.
+ El código en Python de esta solución es: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/img2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En este caso se está utilizando el concepto de función principal y auxiliar
+ que ya se había mostrado.
+ En la función principal se evalúa que el número de entrada debe ser entero,
+ así como el caso especial de que el número sea cero, que en la función
+ recursiva va a servir como condición de terminación.
+ Es importante notar que esta función tiene dos condiciones de terminación:
+ 
+\end_layout
+
+\begin_layout Standard
+• cuando el número se convierte en cero (producto de ir eliminando sus dígitos),
+ en cuyo caso se retorna un valor de falso (False).
+ 
+\end_layout
+
+\begin_layout Standard
+• cuando alguno de los dígitos es cero, para retornar verdadero (True).
+\end_layout
+
+\begin_layout Standard
+A continuación se muestran ejemplos de la ejecució no corrida corrida corrida
+ de la función: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/img3.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Formar un número con los dígitos pares de otro (recursividad de pila)
+\end_layout
+
+\begin_layout Standard
+Se desea construir una función que forme un número a partir de otro, considerand
+o solo los dígitos pares del número de entrada.
+ Esta función debe comportarse de la siguiente forma:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/pila1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como parte de la comprensión del problema, definimos las entradas, salidas
+ y restricciones del mismo.
+\end_layout
+
+\begin_layout Standard
+Entradas: número 
+\end_layout
+
+\begin_layout Standard
+Salidas: número con los dígitos pares del número de entrada 
+\end_layout
+
+\begin_layout Standard
+Restricciones: número entero 
+\end_layout
+
+\begin_layout Standard
+El algoritmo se basa en descomponer el número de entrada, por medio de las
+ funciones de obtener el último dígito y eliminar el último dígito.
+ Cada dígito es analizado y si es par va a formar parte de la salida del
+ problema, creando un nuevo número.
+\end_layout
+
+\begin_layout Standard
+Para construir un nuevo número vamos a considerar que cada dígito en un
+ número es una potencia de 10.
+ Supongamos que tenemos los dígitos 3, 5, 8, 6 (de menos significativo a
+ más significativo) y a partir de ellos vamos a formar el número 6853.
+ Analicemos la siguiente secuencia de operaciones: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/img4.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se utiliza un factor de multiplicación, que es una potencia de 10, para
+ irle dando su correspondiente valor al dígito.
+ El valor inicial del factor es 1 (proviene de 10 0 ), debido a que el primer
+ dígito (menos significativo) del número resultante multiplicado por 1 da
+ como resultado ese dígito.
+ Por cada dígito siguiente, el factor, se va multiplicando por 10, es decir
+ los factores van a ser 1, 10, 100, 1000, 10000 y así sucesivamente.
+ Note que cada factor es una potencia de 10.
+ El resultado de cada producto se suma al siguiente producto, para obtener
+ al final el número que se desea.
+ 
+\end_layout
+
+\begin_layout Standard
+En este caso se utiliza el concepto de función principal para la restricción
+ y auxiliar para hacer la recursividad.
+ Además se está agregando un argumento al realizar la llamada a la función
+ auxiliar (factor de multiplicación), que se necesita para hacer los cálculos.
+ La solución encontrada sigue siendo de recursividad de pila, ya que la
+ llamada recursiva es parte de una operación, en este caso, la suma delos
+ productos.
+ En forma manual, se puede probar la solución, siguiendo la secuencia de
+ llamadas y operaciones: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/pares.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Número de apariciones de un dígito en un número (recursividad de pila)
+\end_layout
+
+\begin_layout Standard
+Se desea construir una función que reciba un dígito y un número entero y
+ cuente las veces que aparece el dígito en el número.
+ El comportamiento de la ejecución debe ser como se muestra a continuación:
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/apariciones.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Inicialmente se definen las entradas, salidas y restricciones.
+\end_layout
+
+\begin_layout Standard
+Entradas: dígito, número 
+\end_layout
+
+\begin_layout Standard
+Salidas: cantidad de veces que aparece el dígito en el número
+\end_layout
+
+\begin_layout Standard
+Restricciones: dígito sea válido, número entero 
+\end_layout
+
+\begin_layout Standard
+El proceso consiste en obtener cada dígito del número y compararlo con el
+ dígito dado como entrada.
+ En caso que sean iguales se van contando para mostrar el resultado final
+ y si son diferentes se continúa con la revisión.
+ 
+\end_layout
+
+\begin_layout Standard
+Por medio de condiciones se verifica cada una de las restricciones del problema,
+ que el dígito sea válido y además que el número sea entero.
+ Efectuando una prueba manual de la función, podemos encontrar la siguiente
+ secuencia de llamadas y resultados:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/apariciones2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Factorial de un número (recursividad de pila)
+\end_layout
+
+\begin_layout Standard
+El problema de cálculo del factorial de un número entero es un ejemplo típico
+ de recursividad.
+ El factorial un número se define de la forma siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+n!=\begin{cases}
+1 & \textrm{si },n=0\\
+n\cdot\left(n-1\right)! & \textrm{si },n>0
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/factorial.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La solución consiste en aplicar la fórmula recursiva, usando como entrada
+ el valor del factorial que se desea calcular.
+ Las entradas, salidas y restricciones se van a indicar únicamente en el
+ código.
+\end_layout
+
+\begin_layout Standard
+En este caso puede verse la relación entre la definición del factorial y
+ la llamada recursiva en el código de la función:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/factorial2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se presenta una ejecución manual de la función factorial: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/ejecManual.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Puede observarse la pila de llamadas, en la cual sevan acumulando los productos,
+ que se resuelven cuando se encuentra la condición de terminación.
+\end_layout
+
+\begin_layout Section
+La sucesión de Fibonacci (recursividad de pila)
+\end_layout
+
+\begin_layout Standard
+En matemáticas, la sucesión de Fibonacci 
+\emph on
+combinatoria
+\emph default
+ es la siguiente sucesión infinita de números naturales: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/fibo1.png
+
+\end_inset
+
+, a partir de su definición:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f\left(n\right)=\begin{cases}
+1 & \textrm{si },n=0\\
+1 & \textrm{si },n=1\\
+f\left(n-1\right)+f\left(n-2\right) & \textrm{si },n>1
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La definición original define el caso trivial de 
+\begin_inset Formula $n=0$
+\end_inset
+
+ como 
+\begin_inset Formula $f(0)=0$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+f\left(n\right)=\begin{cases}
+0 & \textrm{si },n=0\\
+1 & \textrm{si },n=1\\
+f\left(n-1\right)+f\left(n-2\right) & \textrm{si },n>1
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A cada elemento de esta sucesión se le llama númerode Fibonacci.
+ Esta sucesión fue descrita en Europa por Leonardo de Pisa, matemático italiano
+ del siglo XIII también conocido como Fibonacci.
+\end_layout
+
+\begin_layout Standard
+El primer elemento es 1, el segundo es 1 y cada elemento restante es la
+ suma de los dos anteriores.
+ El tercer término de la sucesión se obtiene sumando el segundo y el primero,
+ el cuarto, a partir de la suma del tercero y el segundo y así sucesivamente.
+ El problema a resolver sería calcular el valor del n-ésimo término de la
+ sucesión, que se obtendrá sumando los términos 
+\begin_inset Formula $n-1$
+\end_inset
+
+ y 
+\begin_inset Formula $n-2$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/fibo2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En esta función es de suma importancia notar que se realiza una doble llamada
+ recursiva con diferentes argumentos cada vez que se ejecuta la función.
+ La ejecución de esta función tendría una forma similar a la siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/fibo3.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Elevar un número a una potencia (recursividad de pila)
+\end_layout
+
+\begin_layout Standard
+Una función muy utilizada es elevar un número a una potencia o exponenciación.
+ Aún cuando vimos que Python provee funciones para realizarla, es importante
+ comprender como la función puede ser programada.
+ Elevar un número a una potencia significa multiplicar un número (base)
+ por sí mismo cierta cantidad de veces (exponente).
+ La base puede ser cual cualquier número real y la potencia se va a considerar
+ como un número entero mayor a igual a cero.
+ La exponenciación descrita anteriormente puede escribirse matemáticamente
+ mediante la fórmula: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/expo.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Puede notarse que existe un proceso repetitivo en la fórmula, que puede
+ modelarse como un proceso recursivo.
+ La recursividad consistiría en ir multiplicando el número la cantidad de
+ veces que indique el exponente.
+ 
+\end_layout
+
+\begin_layout Standard
+Puede notarse que la llamada recursiva es un reflejo exacto de la fórmula
+ de la exponenciación.
+ Se presenta una ejecución manual dela función elevar: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/elevar.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Al encontrar la condición de terminación se resuelven los productos (de
+ la base), considerando que por definición de la fórmula: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/elevar3.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Calculo de una sumatoria de números naturales predecesores(recursividad
+ de pila)
+\end_layout
+
+\begin_layout Standard
+Las sumatorias son fórmulas utilizadas para describir el comportamiento
+ de los términos, desde un límite inferior hasta un límite superior.
+ La fórmula se describe utilizando la letra griega sigma-mayúscula
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/sumatoria.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La variable i describe el índice de la sumatoria, que inicia en el límite
+ inferior y va a llegar hasta n, que es el límite superior.
+ En el cuerpo de la sumatoria, se describe el comportamiento que tendrá
+ cada término a sumar.
+ En esta caso, cada término a sumar es i, desde que vale 0 hasta que llega
+ al límite superior n.
+ 
+\end_layout
+
+\begin_layout Standard
+La ejecución de la función muestra el siguiente comportamiento:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/sumatoria2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Calculo de la sumatoria de un intervalo
+\end_layout
+
+\begin_layout Standard
+Se desea construir una función que sume desde un valor inicial denominado
+ A hasta un valor final denominado B, donde A y B son dos números enteros.
+ Así mismo A debe ser menor o igual a B.
+ Se debe implementar la fórmula matemática descrita por: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/sumIntervalo.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El código de la función indicando sus entradas, salidas y restricciones
+ sería: # Función: sumatoria de un intervalo # Entradas: a, b (límites de
+ sumatoria) # Salidas: sumatoria según fórmula dada # Restricciones: n >=
+ 0, a <= b
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/sumIntervalo2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Algoritmo de Euclides para encontrar el MCD de un número
+\end_layout
+
+\begin_layout Standard
+El máximo común divisor (mcd) es el mayor entero que divide con residuo
+ de cero o en forma exacta a dos números enteros.
+ Existen varios métodos para implementar la función de 
+\emph on
+mcd
+\emph default
+.
+ A continuación se presenta un método llamado el algoritmo de Euclides.
+ Este método utiliza residuos sucesivos entre los números.
+ Por ejemplo, tenemos que si se desea calcular: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/MCD.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se van calculando los residuos, tomando para la siguiente repetición el
+ número que sirvió como divisor y el residuo.
+ Cuando el residuo es cero, se toma el último divisor como máximo común
+ divisor.
+ Implemente una función 
+\emph on
+calcularMCD(numero1, numero2) 
+\emph default
+que retorne el máximo común divisor entre 
+\emph on
+numero1
+\emph default
+ y 
+\emph on
+numero2.
+\end_layout
+
+\begin_layout Section
+Determinar si un número es primo
+\end_layout
+
+\begin_layout Standard
+El problema de determinar si un número es primo tiene diversas soluciones
+ y ha sido ampliamente estudiado por diversos matemáticos.
+ Un número es primo si y solo si es divisible en forma exacta únicamente
+ por 1 y por sí mismo.
+ La función a construir debe recibir un número entero y retornar un valor
+ booleano que indique si el número es primo o no es primo.
+ El proceso de solución es un proceso repetitivo, que va a buscar entre
+ los números entre 2 y el mismo número (sin considerarlo), para encontrar
+ si alguno lo divide en forma exacta.
+ Un número divide en forma exacta a otro si el residuo de la división entera
+ es cero, es decir: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/primo.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+implica que 
+\emph on
+num1
+\emph default
+ es divisible entre 
+\emph on
+num2
+\emph default
+, lo cual es lo mismo que 
+\emph on
+num2
+\emph default
+ es un divisor exacto de 
+\emph on
+num1
+\emph default
+.
+ Implemente la función 
+\emph on
+verificarSiEsPrimo(numeroPrimo) 
+\emph default
+la cual retorne verdadero si el número recibido es primo.
+\end_layout
+
+\begin_layout Section
+Determinar el número de combinaciones de un conjunto
+\end_layout
+
+\begin_layout Standard
+Sea un conjunto de 
+\begin_inset Formula $n$
+\end_inset
+
+ elementos.
+ Las combinaciones de 
+\emph on
+m
+\emph default
+ elementos del conjunto son subconjuntos de 
+\emph on
+m
+\emph default
+ elementos (sin importar el orden).
+ El número de combinaciones indica la cantidad de formas en que se pueden
+ extraer subconjuntos a partir de un conjunto dado.
+ Supongamos que se tiene un conjunto con 6 objetos diferentes 
+\begin_inset Formula ${A,B,C,D,E,F}$
+\end_inset
+
+, de los cuales se desea escoger 2 (sin importar el orden).
+ Existen 15 formas de efectuar la elección: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/combinaciones.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Recursivamente, se puede definir el número de combinaciones de m objetos
+ tomados de 
+\begin_inset Formula $n$
+\end_inset
+
+, denotado (n, m) por: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f\left(n,m\right)=\begin{cases}
+1 & \textrm{si }m=0\textrm{ o }m=n\\
+f\left(n-1,m\right)+f\left(n-1,m-1\right) & \textrm{sino}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/combinaciones2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Puede notarse que esta solución, al igual que Fibonacci, utiliza 
+\series bold
+recursividad doble
+\series default
+.
+ La ejecución muestra los siguientes resultados:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/ncsr.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Escriba la función 
+\emph on
+evaluarCombinatoria(n,m)
+\emph default
+ la cual retorne la cantidad de combinaciones posible al tomar 
+\emph on
+m
+\emph default
+ elementos de un conjunto de 
+\emph on
+n.
+\end_layout
+
+\begin_layout Section
+Implementación recursiva de la multiplicación
+\end_layout
+
+\begin_layout Standard
+La operación de multiplicar dos números a * b, cuando b es un número entero,
+ puede calcularse recursivamente por medio de b - 1 sumas sucesivas del
+ número a.
+ Por ejemplo la multiplicación 8 * 4, podría verse como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+8*4=8+8+8+8
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Escriba una función recursiva 
+\emph on
+multi(num1, num2)
+\emph default
+ que reciba dos números e implemente la multiplicación por medio de sumas
+ sucesivas
+\end_layout
+
+\begin_layout Section
+Invertir un entero recursivamente
+\end_layout
+
+\begin_layout Standard
+Escriba una función 
+\emph on
+invertir(num)
+\emph default
+ utilizando recursividad de pila que reciba un número entero e invierta
+ sus dígitos.
+ El comportamiento de la función debe ser como se indica a continuación:
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/invertir.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Sumar recursivamente los dígitos de un número
+\end_layout
+
+\begin_layout Standard
+Escriba una función recursiva 
+\emph on
+suma_dig(num)
+\emph default
+ que reciba un número que puede ser entero o real y sume sus dígitos.
+ La función debe brindar resultados como los que se presentan en los siguientes
+ ejemplos: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/sumaDig.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Detector recursivo de palíndromos en números
+\end_layout
+
+\begin_layout Standard
+Un número es palíndromo si puede leerse igual de izquierda a derecha que
+ de derecha a izquierda.
+ Escribir una función llamada 
+\emph on
+palindromo(num)
+\emph default
+que reciba un número y retorne True si el número recibido es un palíndromo
+ y False si no.
+ Por ejemplo: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/palindromo1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Reproducción de insectos
+\end_layout
+
+\begin_layout Standard
+Si de 5 parejas de hormigas cada una engendra 3 hormiguitas, luego mueren,
+ dejando que las 15 hormiguitas nacidas, engendren también 3 hormiguitas
+ por pareja, luego mueren y se sigue repitiendo el proceso.
+ Escriba una función recursiva hormiguitas que recibe como argumento un
+ entero positivo y que determine el número de hormiguitas qué existirán
+ al cabo de n períodos.
+ Considere que siempre se pueden formar las parejas.
+ Algunos resultados de la función se muestran a continuación:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/reproInsectos.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Extraer el dígito mayor
+\end_layout
+
+\begin_layout Standard
+Escriba una función recursiva de pila 
+\emph on
+extraerDigitoMayor(numero)
+\emph default
+ que reciba un número entero y obtenga el dígito mayor.
+ La función debe comportarse como los siguientes ejemplos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/extraerDigitoMayor.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Concatenación de números
+\end_layout
+
+\begin_layout Standard
+Escribir una función 
+\emph on
+num_append(num1, num2)
+\emph default
+ que encadene los dígitos del segundo número con el primer número, de acuerdo
+ al comportamiento siguiente: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/concatenacion.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+División truncada por dígito
+\end_layout
+
+\begin_layout Standard
+Escribir una función en Python 
+\emph on
+div(dig, num)
+\emph default
+ que reciba como argumentos un dígito entre uno y nueve, y un número entero.
+ La función debe retornar el número dividido (truncando) en cada uno de
+ sus dígitos.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/divTrunc.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Tupla con digitos mayores y menores que 5
+\end_layout
+
+\begin_layout Standard
+Escriba una función digitosque reciba un número (que debe ser entero) y
+ retorne una tupla que tenga la siguiente forma: (cantidad-dígitos-mayores-que-5
+, cantidad-dígitos-menores-o-iguales-que-5) La función debe retornar su
+ resultado en forma similar al siguiente ejemplo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/Tupla.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Corrimiento de un entero
+\end_layout
+
+\begin_layout Standard
+Construya una función en Python llamada 
+\emph on
+shift(num)
+\emph default
+ que reciba un número entero y mueva cada dígito una posición hacia adelante,
+ el dígito menos significativo lo pone como dígito más significativo.
+ Por ejemplo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/corrimiento.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Prueba de digitos de un número contenidos en otro número
+\end_layout
+
+\begin_layout Standard
+Escriba una función 
+\emph on
+booleana dig_ab(num1, num2)
+\emph default
+ que recibe 2 números enteros A, B y retorna True si todos los dígitos deel
+ primer número están contenidos en el segundo número y False en otro caso.
+ La función debe retornar resultados como los ejemplos siguientes: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/contenido.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Multiplicación de los digitos
+\end_layout
+
+\begin_layout Standard
+Escriba una función 
+\emph on
+multiplicarDigitos(num1, num2)
+\emph default
+ que recibe 2 números enteros del mismo tamaño y forma un nuevo número con
+ la multiplicación de cada dígito del primer número con cada dígito del
+ segundo número.
+ Si la multiplicación de 2 dígitos es mayor a 9, se toma el dígito menos
+ representativo del resultado de la multiplicación.
+ Los siguientes ejemplos muestran como debe comportarse la ejecución de
+ la función:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/multDigitos.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Cantidad de números primos en intervalo
+\end_layout
+
+\begin_layout Standard
+Escriba una función 
+\emph on
+calcularCantidadPrimosEnIntervalo(a, b)
+\emph default
+ que reciba dos números enteros 
+\emph on
+a
+\emph default
+ y 
+\emph on
+b
+\emph default
+ y determine la cantidad de números primos que existe entre esos dos números
+ (incluyéndolos).
+ El resultado debe ser como se muestra a continuación:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/primos.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Desplazamiento de un número
+\end_layout
+
+\begin_layout Standard
+Construya una función en Python llamada 
+\emph on
+desplazar(num)
+\emph default
+ que reciba un número entero y mueva cada dígito una posición hacia adelante,
+ el dígito menos significativo lo pone como dígito más significativo.
+ Por ejemplo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename imgs/shift.png
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

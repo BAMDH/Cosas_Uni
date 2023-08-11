@@ -1,0 +1,915 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\paragraph_spacing double
+\align center
+
+\size larger
+Instituto Tecnológico de Costa Rica
+\size default
+ 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+\align center
+CE1102 - Taller de introducción a la programación
+\end_layout
+
+\begin_layout Standard
+\align center
+Tarea Programada 1: Filtro de medianas
+\end_layout
+
+\begin_layout Standard
+\align center
+Profesor: Saúl Calderón Ramírez 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+\align center
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Estudiantes: Manuel Calero Ríos, Brandon Mora Díaz y Fabricio Picado Alvarado
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+\align center
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Primer semestre 2022
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang spanish
+Introducción
+\end_layout
+
+\begin_layout Quote
+
+\lang spanish
+En ocasiones cuando se saca una fotografía a alguna persona u objeto, la
+ imagen puede venir perjudicada por el ruido que ocasiona la transferencia
+ de bytes que se pueden confundir en el camino.
+ En esta ocasión se realizará un programa que puede solucionar los errores
+ que ocasiona el ruido en la imágenes.
+ Para comenzar, se utilizará una imagen en escala de grises a la cual se
+ le realizarán sustituciones a los números que se consideran errores, cuyos
+ valores serán 0 o 255.
+ Para la sustitución de estos números se calculará la media y esta reemplazará
+ estos números.
+ La media es un valor intermedio que es determinado por los valores de la
+ matriz.
+ La matriz es un área, ya sea cuadrangular o rectangular, que es determinada
+ por el usuario, mediante el uso de una ventana.
+ Una vez realizado todo el proceso de intercambiado de números, se procede
+ a realizar el guardado de la nueva imagen o matriz.
+ Para que todoe esto sea posible, se utilizarán tanto recursividad de pila
+ y cola, la librería numpy y se hará uso del código Gray con el fin de que
+ facilite el calculo de imágenes en escala de grises.
+\end_layout
+
+\begin_layout Section
+
+\lang spanish
+Análisis del problema.
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset Graphics
+	filename C_page-0002.jpg
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+Las entradas serán o bien, una imagen en blanco y negro o una matriz.
+\end_layout
+
+\begin_layout Quotation
+Subproblemas:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Preguntarle al usuario si lo que quiere tranformar es una imagen o una matriz,
+ en caso de seleccionar una matriz se pasaría directamente al subproblema
+ 4
+\end_layout
+
+\begin_layout Enumerate
+Convertir la imagen en escala de grises mediante el uso del código Gray
+\end_layout
+
+\begin_layout Enumerate
+Con los datos obtenidos en escala de grises, se calcularán las matrices
+ de las listas de listas que se ahí salen.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Preguntarle al usuario el tamaño de la ventada
+\end_layout
+
+\begin_layout Enumerate
+La ventada deberá recolectar los datos que estén dentro de su límite
+\end_layout
+
+\begin_layout Enumerate
+Los datos que fueron obtenidos, serán ordenados de manera ascendente
+\end_layout
+
+\begin_layout Enumerate
+Se calculará una media con un valor intermedio entre los datos obtenidos
+ anteriormente
+\end_layout
+
+\begin_layout Enumerate
+Una vez ordenados los datos, se realizará el intercambio de los valores
+ equivalentes a 0 o 255 por la media obtenida previamente
+\end_layout
+
+\begin_layout Enumerate
+Realizar la tranformación de los nuevos dígitos obtenidos a una imagen o
+ una matriz (en caso de ser matriz, simplemente se le devuelve la nueva
+ matriz al usuario)
+\end_layout
+
+\begin_layout Enumerate
+Se le informa al usuario la duración del proceso
+\end_layout
+
+\begin_layout Enumerate
+Se debe guardar el resultado
+\end_layout
+
+\end_deeper
+\begin_layout Quotation
+Restricciones:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+La imagen no debe ser a color, sino en blanco y negro
+\end_layout
+
+\begin_layout Enumerate
+Se debe calcular la media utilizando el valor del medio y no mediante la
+ fórmula de media aritmética
+\end_layout
+
+\begin_layout Enumerate
+Se deben utilizar los algoritmos de selección y de quick-sort
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+
+\lang spanish
+La salida será la imagen ya corregida o la matriz con sus debidas correcciones
+\end_layout
+
+\begin_layout Section
+
+\lang spanish
+Diseño de la solución
+\end_layout
+
+\begin_layout Subsection
+
+\lang spanish
+Pseudo-código
+\end_layout
+
+\begin_layout Quote
+
+\lang spanish
+1.
+ Se le pregunta al usuario que tipo de algoritmo desea implementar
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+
+\lang spanish
+1.1.
+ Si el usuario selecciona el de ordenamiento por selección, ir al paso 2
+\end_layout
+
+\begin_layout Quote
+
+\lang spanish
+1.2.
+ Si el usuario selecciona el de quick sort, ir al paso 3
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+
+\lang spanish
+2.
+ El usuario seleccionar el algoritmo de ordenamiento por selección para
+ calcular una imagen o una matriz
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+2.1.
+ Si selecciona una imagen, ir al paso 4
+\end_layout
+
+\begin_layout Quote
+2.2.
+ Si selecciona una matriz, ir al paso 8
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+
+\lang spanish
+3.
+ El usuario seleccionar el algoritmo de ordenamiento por selección para
+ calcular una imagen o una matriz
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+3.1.
+ Si selecciona una imagen, ir al paso 4
+\end_layout
+
+\begin_layout Quote
+3.2.
+ Si selecciona una matriz, ir al paso 8
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+
+\lang spanish
+4.
+ Seleccionar la imagen
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+
+\lang spanish
+4.1.
+ Descomponer la imagen en código Gray en escala de grises
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+
+\lang spanish
+4.1.1.
+ Descomponer la imagen en listas mediante recursividad de listas
+\end_layout
+
+\begin_layout Quote
+
+\lang spanish
+4.1.2.
+ Determinar los márgenes de las listas
+\end_layout
+
+\begin_layout Quote
+
+\lang spanish
+4.1.3.
+ Determinar el tamaño de las ventanas
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+
+\lang spanish
+4.1.3.1.
+ Se ordenan, mediante el algoritmo que el usuario haya seleccionado, los
+ elementos de las ventanas de manera ascendente y pasar al paso 3
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Quote
+
+\lang spanish
+5.
+ Determinar la media
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+
+\lang spanish
+5.1.
+ Seleccionar el valor central de la ventana
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+
+\lang spanish
+6.
+ Reemplazar los valores
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+6.1.
+ Si dentro de los valores ordenados en las ventanas existe uno que sea 0
+ o 255, este valor debe ser reemplazado por la media misma
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+7.
+ Guardado
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+5.1.
+ Una vez procesada la nueva lista, esta se debe procesar como una imagen
+\end_layout
+
+\begin_layout Quote
+5.2.
+ El usuario debe seleccionar el direcctorio donde desea guardar la imagen
+\end_layout
+
+\begin_layout Quote
+5.3.
+ Se debe guardar la nueva imagen e informar al usuario el tiempo que tardó
+ el proceso
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+8.
+ El usuario ha seleccionado una matriz
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+8.1.
+ Se verifica la entrada
+\end_layout
+
+\begin_layout Quote
+8.2.
+ Se le pregunta al usuario el tamaño de la ventana de la matriz
+\end_layout
+
+\begin_layout Quote
+8.3.
+ Se realiza el acomodamiento de las imágenes, usando el algoritmo que haya
+ seleccionado el usuario
+\end_layout
+
+\begin_layout Quote
+8.4.
+ Se calcula la media de los números acomodados
+\end_layout
+
+\begin_layout Quote
+8.5.
+ Se le devuelve la nueva imagen al usuario junto con el tiempo que tardó
+ el proceso
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Graphics
+	filename C_page-0003.jpg
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang spanish
+Implementación y pruebas.
+\end_layout
+
+\begin_layout Subsection
+
+\lang spanish
+Prueba de filtrado de una matriz 
+\end_layout
+
+\begin_layout Enumerate
+
+\lang spanish
+Se le da como entrada a la funcion 
+\emph on
+filtrar_imagen(matriz, K, algoritmo_ordenamiento), 
+\emph default
+la siguiente 
+\emph on
+matriz
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+matriz_3 = np.array([[221.0, 222, 250, 251, 223, 249], 
+\end_layout
+
+\begin_layout Plain Layout
+
+[223.0, 220, 250, 251, 225, 242], 
+\end_layout
+
+\begin_layout Plain Layout
+
+[221.0, 0, 250, 251, 221, 249], 
+\end_layout
+
+\begin_layout Plain Layout
+
+[221.0, 222, 255, 251, 0, 249], 
+\end_layout
+
+\begin_layout Plain Layout
+
+[220.0, 219, 250, 251, 221, 249], 
+\end_layout
+
+\begin_layout Plain Layout
+
+[221.0, 222, 250, 251, 223, 249]])    
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Con un 
+\begin_inset Formula $K=3$
+\end_inset
+
+.
+ Usando el algoritmo de ordenamiento seleccion.
+ 
+\end_layout
+
+\begin_layout Subsection
+
+\lang spanish
+Prueba de filtrado de una matriz
+\end_layout
+
+\begin_layout Enumerate
+
+\lang spanish
+Se le da como entrada a la funcion 
+\emph on
+filtrar_imagen(matriz, K, algoritmo_ordenamiento), 
+\emph default
+la siguiente 
+\emph on
+matriz
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+matriz_3 = np.array([[221.0, 222, 250, 251, 223, 249], 
+\end_layout
+
+\begin_layout Plain Layout
+
+[223.0, 220, 250, 251, 225, 242], 
+\end_layout
+
+\begin_layout Plain Layout
+
+[221.0, 0, 250, 251, 221, 249], 
+\end_layout
+
+\begin_layout Plain Layout
+
+[221.0, 222, 255, 251, 0, 249], 
+\end_layout
+
+\begin_layout Plain Layout
+
+[220.0, 219, 250, 251, 221, 249], 
+\end_layout
+
+\begin_layout Plain Layout
+
+[221.0, 222, 250, 251, 223, 249]])    
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Con un 
+\begin_inset Formula $K=4$
+\end_inset
+
+.
+ Usando el algoritmo de ordenamiento quick sort
+\end_layout
+
+\begin_layout Subsection
+
+\lang spanish
+Prueba  de filtrado de una matriz 
+\end_layout
+
+\begin_layout Enumerate
+
+\lang spanish
+Se le da como entrada a la funcion 
+\emph on
+filtrar_imagen(matriz, K, algoritmo_ordenamiento), 
+\emph default
+la siguiente 
+\emph on
+matriz
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+matriz_3 = np.array([[221.0, 222, 250, 251, 223, 249], 
+\end_layout
+
+\begin_layout Plain Layout
+
+[223.0, 220, 250, 251, 225, 242], 
+\end_layout
+
+\begin_layout Plain Layout
+
+[221.0, 0, 250, 251, 221, 249], 
+\end_layout
+
+\begin_layout Plain Layout
+
+[221.0, 222, 255, 251, 0, 249], 
+\end_layout
+
+\begin_layout Plain Layout
+
+[220.0, 219, 250, 251, 221, 249], 
+\end_layout
+
+\begin_layout Plain Layout
+
+[221.0, 222, 250, 251, 223, 249]])    
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Con un 
+\begin_inset Formula $K=3$
+\end_inset
+
+.
+ Usando el algoritmo de ordenamiento quick sort.
+ 
+\end_layout
+
+\begin_layout Subsection
+
+\lang spanish
+Prueba de filtrado de una imagen
+\end_layout
+
+\begin_layout Enumerate
+
+\lang spanish
+Se da como entrada una imagen a la cual hay que eliminar los 
+\begin_inset Quotes eld
+\end_inset
+
+ruidos
+\begin_inset Quotes erd
+\end_inset
+
+ producidos en ella
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/Administrador/Downloads/Captura.PNG
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C_page-0001.jpg
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang spanish
+Conclusiones y recomendaciones
+\end_layout
+
+\begin_layout Quote
+
+\lang spanish
+1.
+ Hubo instrucciones que se facilitaron por los temas vistos en las semanas
+ anteriores como manipulación de listas para ordenarlas de manera ascendente
+ y sacar la mediana.
+ 
+\end_layout
+
+\begin_layout Quote
+
+\lang spanish
+2.
+ Un reto fue el entendimiento completo de las matrices ya que se tuvo que
+ recorrer una imagen, y en los fragmentos con ruido convertirlos a listas
+ para solucionarlo.
+ 
+\end_layout
+
+\begin_layout Quote
+
+\lang spanish
+3.
+ El aspecto mas desafiante fue el de lograr que funcionará con diferentes
+ tamaños de ventana, ya que conforme se hace mas grande se elige, mas pesado
+ es el trabajo que necesita realizar.
+ 
+\end_layout
+
+\begin_layout Quote
+
+\lang spanish
+4.
+ Por otro lado mejoramos el trabajo en equipo ya que entre varios integrantes
+ al realizar un trabajo más complejo se tuvo que designar roles y coordinar
+ tiempos para hablar y mejorar el progreso que se llevaba.
+\end_layout
+
+\begin_layout Section
+
+\lang spanish
+Bibliografía
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+
+\lang spanish
+Yolanda Martinez Treviño.
+ Ejemplo Python: Crear una matriz como lista de listas.
+ (1 de octubre de 2020).
+ Accedido el 11 de mayo de 2022.
+ [Video en línea].
+ Disponible: https://www.youtube.com/watch?v=uJy3vPXzjs0
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+
+\end_inset
+
+
+\lang spanish
+DayiTecnologia.
+ Matrices en Python --EJERCICIO Programacion RESUELTO--Matriz con listas
+ anidadas.
+ (13 de julio de 2021).
+ Accedido el 11 de mayo de 2022.
+ [Video en línea].
+ Disponible: https://www.youtube.com/watch?v=_ohpNH2YQmY
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-3"
+
+\end_inset
+
+Mimi.
+ "Crear una imagen BGR, escala de gris openCV python".
+ kipunaEc.
+ https://noemioocc.github.io/posts/Crear-una-imagen-BGR-openCV-Python/ (accedido
+ el 11 de mayo de 2022).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-4"
+
+\end_inset
+
+R.
+ Wachenchauzer, M.
+ Manterola, M.
+ Curia, M.
+ Medrano y N.
+ Paez.
+ "Ordenamiento por selección (Algoritmos de Programación con Python)".
+ Diseño y programación web (libros, tutoriales y vídeos sobre HTML, CSS,
+ JavaScript, PHP).
+ https://uniwebsidad.com/libros/algoritmos-python/capitulo-19/ordenamiento-por-se
+leccion (accedido el 11 de mayo de 2022).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-5"
+
+\end_inset
+
+"QuickSort (With Code in Python/C++/Java/C)".
+ Programiz: Learn to Code for Free.
+ https://www.programiz.com/dsa/quick-sort (accedido el 11 de mayo de 2022).
+\end_layout
+
+\end_body
+\end_document

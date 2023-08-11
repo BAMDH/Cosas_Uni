@@ -1,0 +1,266 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\lang spanish
+Taller de Programación: Tarea 0
+\end_layout
+
+\begin_layout Author
+
+\lang spanish
+Brandon Andrés Mora Díaz 2022164409
+\begin_inset Newline newline
+\end_inset
+
+Instituto Tecnológico de Costa Rica, 
+\begin_inset Newline newline
+\end_inset
+
+Escuela de Ingeniería en Computación
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\lang spanish
+Fecha de entrega:
+\series default
+ Martes 22 de Febrero.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang spanish
+REDEFINIIR
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\lang spanish
+Entrega
+\series default
+: Un archivo pdf donde documente los resultados de cada paso, además del
+ archivo pdf generado con lyx, y el archivo lyx con el reporte.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\lang spanish
+Primero instalé Miktex, para lograr esto entré a la página y lo descargué.
+ Abrí el instalador y seguí los pasos hasta que finalizó el proceso.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang spanish
+\begin_inset Graphics
+	filename C:/Users/Usuario/Pictures/Captura.PNG
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang spanish
+Prueba de instalación Miktex
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\lang spanish
+El directorrio de instalación es 
+\emph on
+C:
+\backslash
+Users
+\backslash
+Usuario
+\backslash
+AppData
+\backslash
+Local
+\backslash
+Programs
+\backslash
+MiKTeX
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\lang spanish
+Después procedí a Instalar Lyx.
+ Lo descargué desde la página oficial y abrí el instalador, seguí los pasos
+ y hasta finalizar el proceso.
+ Lastimosamente me dio error al convertir en pdf, así que traté de solucionarlo
+ de distintas maneras pero todo fue en vano.
+ Finalmente decidí desinstalarlo y descargar una versión portable, esta
+ funciona bien y sin problemas.
+ Hola de nuevo profe.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang spanish
+\begin_inset Graphics
+	filename C:/Users/Usuario/Pictures/hola.PNG
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang spanish
+Prueba de instalación de Lyx
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Este es el fin de mi reporte, aún no me acostumbro a este programa, pero
+ promete bastante.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Posdata: No sabía si hay que añadir las instrucciones.
+ Por si acaso no las incluí.
+\end_layout
+
+\end_body
+\end_document

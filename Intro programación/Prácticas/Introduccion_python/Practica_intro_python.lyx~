@@ -1,0 +1,459 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{palatino}
+\pagenumbering{gobble}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 2cm
+\headsep 2cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Práctica : Elementos de computación
+\end_layout
+
+\begin_layout Part
+Historia y principios de la computación 
+\end_layout
+
+\begin_layout Enumerate
+Mencione una diferencia entre la máquina analítica de Charles Babbage y
+ el computador ENIAC.
+\end_layout
+
+\begin_layout Enumerate
+Mencione la diferencia entre la EDVAC y la ENIAC.
+\end_layout
+
+\begin_layout Enumerate
+Explique el aporte a la ciencias de la computación del matemático Jon Von
+ Neumann.
+\end_layout
+
+\begin_layout Enumerate
+¿Qué ventajas presenta el lenguaje FORTRAN respecto a un lenguaje ensamblador?
+\end_layout
+
+\begin_layout Enumerate
+
+\lang spanish
+Explique la diferencia entre los lenguajes naturales y formales.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\lang spanish
+Mencione al menos dos lenguajes naturales y dos lenguajes formales.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\lang spanish
+Defina y explique las actividades a realizar en las cuatro etapas del ciclo
+ de resolución de problemas.
+\end_layout
+
+\begin_layout Enumerate
+
+\lang spanish
+Mencione y explique los dos tipos de actividades de mantenimiento en un
+ programa.
+\end_layout
+
+\begin_layout Enumerate
+
+\lang spanish
+¿Cuál es la diferencia entre las reglas sintácticas y léxicas en un lenguaje?
+\end_layout
+
+\begin_layout Part
+Programación en Python
+\end_layout
+
+\begin_layout Enumerate
+Realice al menos 10 ejercicios de expresiones relacionales y booleanas,
+ sin el uso de computador: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.mclibre.org/consultar/python/ejercicios/ej-booleanos.html
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Declare e inicialice la variable 
+\emph on
+a 
+\emph default
+con el literal 78.9 y cree una variable booleana con valor 
+\emph on
+True 
+\emph default
+si el tipo de datos de tal variable es complejo.
+ 
+\end_layout
+
+\begin_layout Enumerate
+De la siguiente lista de listas, extraiga el valor 
+\begin_inset Quotes eld
+\end_inset
+
+embora
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+lista1 = [[
+\begin_inset Quotes eld
+\end_inset
+
+razon
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+television
+\begin_inset Quotes erd
+\end_inset
+
+], [
+\begin_inset Quotes eld
+\end_inset
+
+mora
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+chega
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+chuva
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+embora
+\begin_inset Quotes erd
+\end_inset
+
+], [
+\begin_inset Quotes eld
+\end_inset
+
+Achtung
+\begin_inset Quotes erd
+\end_inset
+
+, 			
+\begin_inset Quotes eld
+\end_inset
+
+liebe
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+Segen
+\begin_inset Quotes erd
+\end_inset
+
+]]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Inicialice una tupla basada en la tupla 
+\emph on
+tupla1, 
+\emph default
+la cual cambie el elemento 
+\begin_inset Quotes eld
+\end_inset
+
+chuva
+\begin_inset Quotes erd
+\end_inset
+
+ por 
+\begin_inset Quotes eld
+\end_inset
+
+lluvia
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+tupla1 = ((
+\begin_inset Quotes eld
+\end_inset
+
+mora
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+chega
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+chuva
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+embora
+\begin_inset Quotes erd
+\end_inset
+
+))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Escriba un programa en Python que lea un número de tres digitos del teclado,
+ y guarde el resultado en una variable compleja.
+\end_layout
+
+\begin_layout Enumerate
+Escriba un programa en Python que invierta el orden de los dígitos en un
+ número entero, guardando el resultado en la variable 
+\emph on
+numeroInvertido.
+ 
+\emph default
+Por ejemplo:
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+numeroEntrada = 365
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+print(resultado)
+\end_layout
+
+\begin_layout Plain Layout
+
+>>> 563
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Escriba un programa en Python que verifique que un número de tres digitos
+ contenido en la variable 
+\emph on
+numero 
+\emph default
+tenga al menos un dígito mayor que 5, creando una variable booleana con
+ valor 
+\emph on
+True
+\emph default
+ si tal condición se cumple.
+\end_layout
+
+\begin_layout Enumerate
+Escriba un programa en Python que verifique que un número de tres digitos
+ contenido en la variable 
+\emph on
+numero 
+\emph default
+tenga al menos un dígito par, creando una variable booleana con valor 
+\emph on
+True
+\emph default
+ si tal condición se cumple.
+\end_layout
+
+\begin_layout Enumerate
+Escriba un programa en Python que verifique si una variable entera es un
+ 
+\emph on
+palindromo.
+ 
+\emph default
+Un palindromo es un valor equivalente si se lee de izquierda a derecha como
+ de derecha a izquierda.
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+numeroEntrada = 363
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+print(resultado)
+\end_layout
+
+\begin_layout Plain Layout
+
+>>> True
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

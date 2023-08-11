@@ -1,0 +1,736 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{palatino}
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+
+\lstset{language=Python,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space   
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 2cm
+\headsep 2cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\align left
+\begin_inset Tabular
+<lyxtabular version="3" rows="18" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size large
+Instituto Tecnológico de Costa Rica
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+QUIZ 4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size large
+Escuela de Computación
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fecha: 14/05/2022
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Programa de Bachillerato de Ingenieria en Computación
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Grupo: 05
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Curso: IC-1803 Taller de programación
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Profesor: Ph.
+ D.
+ Saúl Calderón Ramírez
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Valor: 100 pts.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Semestre: I - 2022
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Puntos Obtenidos: ____________
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nota: ________________
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nombre del (la) estudiante: Brandon Andrés Mora Díaz
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Carné: 2022164409
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Instrucciones generales
+\end_layout
+
+\begin_layout Itemize
+La presente evaluacion es individual.
+\end_layout
+
+\begin_layout Itemize
+Responda de forma clara y ordenada.
+\end_layout
+
+\begin_layout Itemize
+Debe subir el archivo jupyter con la respuesta a cada pregunta al TEC digital,
+ antes del proximo 
+\series bold
+domingo a las 23:45 horas
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Cualquier intento de fraude durante la aplicación de la prueba resultará
+ automáticamente en la asignación de la nota de cero.
+\end_layout
+
+\begin_layout Itemize
+Detalle las etapas de: 
+\series bold
+(10 puntos)
+\series default
+ Análisis del problema (definición de las entradas, salidas, restricciones
+ y sub-problemas), 
+\series bold
+(20 puntos)
+\series default
+ Diseño (pseudocódigo) e 
+\series bold
+(70 puntos)
+\series default
+ Implementación (escritura del código en Python).
+ 
+\end_layout
+
+\begin_layout Itemize
+Realice todas las validaciones que considere necesarias.
+\end_layout
+
+\begin_layout Itemize
+Implemente todas las pruebas especificadas.
+\end_layout
+
+\begin_layout Enumerate
+Escriba una función 
+\emph on
+multiplicar_matrices(matriz_1, matriz_2) 
+\emph default
+la cual implemente la multiplicacion de dos matrices, ambas representadas
+ en listas de listas.
+ Investigue en que consiste la multiplicacion matricial para ello.
+ 
+\series bold
+\lang spanish
+Utilice recursividad (de cualquier tipo) 
+\series default
+.
+ A continuación se presentan ejemplos de su ejecución: 
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+>>>multiplicar_matrices([[2.0, 3], [6,7]], [[5.0, 1], [4,7]])
+\end_layout
+
+\begin_layout Plain Layout
+
+[[22, 23], [58, 55]]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+>>>multiplicar_matrices([[2.0, 3], [6,7]], [[5.0, 1, 2], [4, 7, 1]])
+\end_layout
+
+\begin_layout Plain Layout
+
+[[22, 23, 7], [58, 55, 19]]
+\end_layout
+
+\begin_layout Plain Layout
+
+>>>multiplicar_matrices('paf', 'asgf')
+\end_layout
+
+\begin_layout Plain Layout
+
+'Value Error: Tipo de datos incorrecto'
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Análisis
+\end_layout
+
+\begin_layout Itemize
+Las entradas son matrices
+\end_layout
+
+\begin_layout Itemize
+La salida será el resultado de la multiplicación
+\end_layout
+
+\begin_layout Itemize
+Solamente pueden ser matrices
+\end_layout
+
+\begin_layout Itemize
+Subproblemas:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Confirmar tipos de datos
+\end_layout
+
+\begin_layout Itemize
+Multiplicar los valores correctos para conseguir los valores y sumarlos
+ para conformar los elementos que formaran la matriz final
+\end_layout
+
+\begin_layout Itemize
+Crear la matriz final de acuerdo al formato adecuado
+\end_layout
+
+\begin_layout Itemize
+Separar los datos para formar la matriz final
+\end_layout
+
+\begin_layout Itemize
+retornar el resultado
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\lang spanish
+Pseudocódigo:
+\end_layout
+
+\begin_layout Enumerate
+
+\lang spanish
+multiplicar_matrices(matriz1,matriz2)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Confirma los datos, si hay un error en el tipo de datos lo notifica
+\end_layout
+
+\begin_layout Enumerate
+En caso de que los datos sean correctos, se llama la funcion multiplicar_matrice
+s_aux(matriz1,matriz2,fila,nueva_matriz,columna)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+multiplicar_matrices_aux(matriz1,matriz2,fila,nueva_matriz,columna)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Cuando fila sea igual a la longitud de matriz1 se retorna la nueva matriz
+ y se detiene la función
+\end_layout
+
+\begin_layout Enumerate
+De lo contrario se llama la función conseguir_elemento(elemento,matriz2,contador
+,columna,posicion) para obtener los elementos de la nueva matriz y se añade,
+ se llama la función de nuevo y se aumenta en uno el valor de columna
+\end_layout
+
+\begin_layout Enumerate
+Cuando columna es igual a la longitud del primer elemento de la matriz2,
+ se toma el valor de nueva matriz y se añade a la pila para formar las diferente
+s columnas de la nueva matriz, entonces la nueva matriz toma el valor de
+ una lista vacia para iniciar el proceso con la siguiente fila, entonces
+ se aumenta el valor de fila en uno.
+\end_layout
+
+\begin_layout Enumerate
+Se retorna el valor acumulado en la pila, el cual es la matriz que resulta
+ de la multiplicación
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+conseguir_elemento(elemento,matriz2,contador,columna,posicion)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si contador es igual a longitud de matriz2 se retorna el valor acumulado
+\end_layout
+
+\begin_layout Enumerate
+De lo contrario se multiplican los valores, para hacer esto la variable
+ posición indica el elemento a multiplicar de elemento y contador recorre
+ la posición de la columna de la matriz2, con cada llamado el resultado
+ se suma en la pila de llamados, además se añade uno a contador y posicion.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

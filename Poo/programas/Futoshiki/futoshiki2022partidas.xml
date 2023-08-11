@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<partidasFutoshiki>
+  <partida>
+    <nivel>dificil</nivel>
+    <desigualdades>a00</desigualdades>
+    <desigualdades>a02</desigualdades>
+    <desigualdades>a03</desigualdades>
+    <desigualdades>b33</desigualdades>
+    <desigualdades>b40</desigualdades>
+    <desigualdades>b41</desigualdades>
+    <constantes>410</constantes>
+    <constantes>214</constantes>
+    <constantes>422</constantes>
+    <constantes>434</constantes>
+  </partida>
+  <partida>
+    <nivel>dificil</nivel>
+    <desigualdades>z03</desigualdades>
+    <desigualdades>y10</desigualdades>
+    <desigualdades>a30</desigualdades>
+    <desigualdades>b42</desigualdades>
+    <constantes>101</constantes>
+    <constantes>423</constantes>
+    <constantes>540</constantes>
+    <constantes>241</constantes>
+  </partida>
+</partidasFutoshiki>

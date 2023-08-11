@@ -1,0 +1,1776 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family ttdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 1cm
+\headsep 1cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle plain
+\bullet 3 3 8 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\family sans
+Tabajo Practico 0
+\end_layout
+
+\begin_layout Author
+Brandon Mora Diaz
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Diagrama de casos de uso.PNG
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de casos de usos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+
+\family sans
+Pseudocodigo
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+El sistema inicia en el menu principal preguntando si el usuario es el banquero
+ o un usuario corriente
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Si el usuario es un usuario corriente 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Se verifica que hayan usuarios creados en el sistema (se consulta en el
+ archivo de la lista de usuarios)
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Si no hay usuarios en el sistema:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Se le indica al ususario la situacionEn caso de que no existan cajeros :
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta si desea volver al menu principal o si desea cerrar el sistema
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\family sans
+se pregunta por su nombre de usuario 
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+se pregunta por su pin
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Si los datos no coinciden con los archivos del sistema :
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Se le indica al ususario la situacion
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta si desea volver al menu principal o si desea cerrar el sistema
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+
+\family sans
+Si ambos datos coinciden con los datos del sistema se despliegan las opciones
+ que el usuario tiene para hacer
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+\series bold
+\shape slanted
+Retirar dinero
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Se confirma de que hayan cajeros creados (se consulta al archivo de la lista
+ de cajeros)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+En caso de que no existan cajeros :
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Se le inidica al usuario la situacion
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta si desea regresar el menu principal o si quiere cerrar el
+ sistema
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+
+\family sans
+Se depliegan los cajeros disponibles y se pregunta le pregunta al usuario
+ en que cajero desea realizar la transaccion 
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+El usuario debe de elegir un cajero digitando el nombre del cajero al que
+ desea ingresa
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Si el usuario ingresa un nombre de cajero inexistente :
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Se le indica al ususario la situacion
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta si desea volver al menu principal o si desea cerrar el sistema
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta al usuario cuanta cantidad de dinero desea retirar
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se confirma que el valor ingresado sea un numero entero positivo 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+En caso de no ser asi :
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Se le indica al ususario la situacion
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta si desea volver al menu principal o si desea cerrar el sistema
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+
+\family sans
+Se confirma que el usuario tenga la cantidad suficiente para realizar la
+ transaccion 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+En caso de no tener suficientes fondos
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Se le indica al ususario la situacion
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta si desea volver al menu principal o si desea cerrar el sistema
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+
+\family sans
+Se confirma que el cajero elegido tenga suficiente dinero y billetes para
+ realizar la transaccion
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+En caso de no ser asi :
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Se le indica al ususario la situacion
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta si desea volver al menu principal o si desea cerrar el sistema
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+
+\family sans
+Se busca la cantidad minima de billetes para dar al usuario 
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se indica cuantos billetes se le van a entregar al usuario por denominacion
+ y cual es su saldo actual
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se guarda en el archivo del usuario la transaccion realizada con la fecha,
+ hora y cajero en que se realizo la transaccion 
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se actualizan los datos del usuario restando el monto que retiro y el monto
+ que tenia en la cuenta 
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se actualizan los datos del cajero restando los billetes que el usuario
+ retiro por los billetes que el cajero tenia 
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se inidica que la transaccion se ha realizado con exito
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta al usuario si desea regresar al menu principal o si desea
+ cerrar el sistema
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\family sans
+\series bold
+\shape slanted
+Depositar Dinero
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Se confirma de que hayan cajeros creados (se consulta al archivo de la lista
+ de cajeros)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+En caso de que no existan cajeros : 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Se le inidica al usuario la situacion
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta si desea regresar el menu principal o si quiere cerrar el
+ sistema 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+
+\family sans
+Se depliegan los cajeros disponibles y se pregunta le pregunta al usuario
+ en que cajero desea realizar la transaccion 
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+El usuario debe de elegir un cajero digitando el nombre del cajero al que
+ desea ingresar 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Si el usuario ingresa un nombre de cajero inexistente :
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Se le indica al ususario la situacion
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta si desea volver al menu principal o si desea cerrar el sistema
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta al usuario cuales son los billetes que desea depositar por
+ denominacion 
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se confirma que los valores indicados sean numeros enteros positivos 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+En caso de no ser asi :
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Se le indica al ususario la situacion
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta si desea volver al menu principal o si desea cerrar el sistema
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+
+\family sans
+Se actualiza el archivo del usuario sumando el monto que deposito mas el
+ monto que tenia y guardando la transaccion con la fecha, hora y cajero
+ en que fue realizada
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se acatualiza el archivo del cajero sumando los billetes que tenia mas los
+ billetes depositados por denominacion
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le indica al usuario que la transaccion fue realizada con exito 
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta al usuario si desea regresar al menu principal o si desea
+ cerrar el sistema 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\family sans
+\series bold
+\shape slanted
+Consultar el historial de transacciones 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Se confirma si el usuario ha realizado alguna transaccion (se consulta con
+ el archivo con el nombre del usuario)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+En caso de no haber realizado niniguna transaccion
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Se le indica al ususario la situacion (no tiene historial de transacciones
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta si desea volver al menu principal o si desea cerrar el sistema
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+
+\family sans
+Se muestra al usuario todas las transacciones hechas por el usuario con
+ el monto retirado o depositado con la fecha, hora y cajero en que se realizaron
+ las transacciones 
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta al usuario si desea regresar al menu principal o si desea
+ cerrar el sistema 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Si el usuario es un banquero
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Se despliegan l
+\family sans
+as opciones que el banquero tiene para hacer 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+\shape slanted
+Crear cajeros
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El banquero indica el nombre del cajero que desea crear 
+\end_layout
+
+\begin_layout Enumerate
+Se confirma que el nombre introducido por el banquero cumpla el estandar(
+ A − Z )( A − Z )( A − Z )][0 − 9] + 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+En caso de no hacerlo :
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Se le indica al banquero la situacion
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta si desea volver al menu principal o si desea cerrar el sistema
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Se confirma que el nombre del cajero no exista en la lista de cajeros 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+En caso de no hacerlo :
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Se le indica al banquero la situacion
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta si desea volver al menu principal o si desea cerrar el sistema
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta que billetes desea depositar en el cajero por denominacion
+\end_layout
+
+\begin_layout Enumerate
+Se confirma que los valores introducidos sean numeros enteros positivos
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+En caso de no hacerlo: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Se le indica al banquero la situacion
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta si desea volver al menu principal o si desea cerrar el sistema
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Se crea el archivo con el nombre del cajero que contendra los billetes almacenad
+os 
+\end_layout
+
+\begin_layout Enumerate
+Se actualiza el archivo de la lista de cajeros agregando el nombre del cajero
+ 
+\end_layout
+
+\begin_layout Enumerate
+Se indica al banquero que se ha creado el cajero con exito 
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta al banquero si desea regresar al menu principal o si desea
+ cerrar el sistema 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+\shape slanted
+Crear usuarios 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El banquero indica el nombre del usuario que desea crear
+\end_layout
+
+\begin_layout Enumerate
+Se confirma que el nombre introducido cumple con el estandar [( a − z )
+ | ( A − Z )] + [0 − 9][0 − 9][0 − 9][0 − 9][! | $ | # | & | ?]
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+En caso de no hacerlo: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Se le indica al banquero la situacion
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta si desea volver al menu principal o si desea cerrar el sistema
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Se confirma que el nombre de usuario no exista en la lista de usuarios 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+En caso de no hacerlo: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Se le indica al banquero la situacion
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta si desea volver al menu principal o si desea cerrar el sistema
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Se genera un pin aleatorio de 4 digitos 
+\end_layout
+
+\begin_layout Enumerate
+Se crea un archivo con el nombre del usuario que contendra el pin del usuario
+ y el saldo de la cuenta (inicia en 0)
+\end_layout
+
+\begin_layout Enumerate
+Se actualiza el archivo de la lista de usuarios agregando el nombre del
+ usuario 
+\end_layout
+
+\begin_layout Enumerate
+Se indica que el usuario se ha creado con exito 
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta al banquero si desea regresar al menu principal o si desea
+ cerrar el sistema 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+\shape slanted
+Agregar dinero a cajeros existentes
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Se despliegan las opciones de cajeros existentes en el archivo de la lista
+ de cajeros 
+\end_layout
+
+\begin_layout Enumerate
+El banquero elige uno escribiendo el nombre del cajero al que desea depositar
+ dinero
+\end_layout
+
+\begin_layout Enumerate
+Se confirma que el nombre introducido este entre las opciones 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+En caso de no ser asi:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Se le indica al banquero la situacion
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta si desea volver al menu principal o si desea cerrar el sistema
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al banquero los billetes que desea depositar por denominacion
+\end_layout
+
+\begin_layout Enumerate
+Se confirma que los valores introducidos sean numeros enteros positivos}
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+En caso de no ser asi:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family sans
+Se le indica al banquero la situacion
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta si desea volver al menu principal o si desea cerrar el sistema
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Se actualizan los datos del archivo del cajero sumando los billetes que
+ añadio el banquero 
+\end_layout
+
+\begin_layout Enumerate
+Se indica que se hizo el deposito con exito 
+\end_layout
+
+\begin_layout Enumerate
+
+\family sans
+Se le pregunta al banquero si desea regresar al menu principal o si desea
+ cerrar el sistema 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+En caso de que no se quieran realizar mas acciones el usuario puede seleccionar
+ la opcion de salir para terminar la ejecucion del sistema.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Prueba0 
+\end_layout
+
+\begin_layout Enumerate
+El sistema le da la bienvenida al usuario y le pregunta si es un banquero
+ o un usuario corriente 
+\end_layout
+
+\begin_layout Enumerate
+El usuario indica que es el banquero
+\end_layout
+
+\begin_layout Enumerate
+Se pregunta al banquero que desea realizar 
+\end_layout
+
+\begin_layout Enumerate
+El banquero indica que va a crear un usuario 
+\end_layout
+
+\begin_layout Enumerate
+Se pregunta cual va a ser el nombre del nuevo usuario 
+\end_layout
+
+\begin_layout Enumerate
+El banquero indica que el nombre del usuario sera 
+\begin_inset Quotes eld
+\end_inset
+
+TT7777#
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Se confirma que este es un nombre de usuario valido ya que cumple el estandar
+ [( a − z ) | ( A − Z )] + [0 − 9][0 − 9][0 − 9][0 − 9][! | $ | # | & |
+ ?]
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se genera un pin aleatorio de cuatro digitos 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El pin aleatorio generado es: 8976
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se crea un archivo con el nombre TT7777#.txt
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El archivo contiene los datos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El pin: 8976 
+\end_layout
+
+\begin_layout Enumerate
+El monto: 0 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Se actualiza el archivo lista_usuarios.txt
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Se agrega el nombre del usuario TT7777# en el archivo 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El banquero recibe el mensaje de que se creo el usuario con exito y si desea
+ cerrar el sistema o si quiere volver al menu principal 
+\end_layout
+
+\begin_layout Enumerate
+El banquero vuelve al menu principal 
+\end_layout
+
+\begin_layout Enumerate
+El sistema le da la bienvenida al usuario y le pregunta si es un banquero
+ o un usuario corriente 
+\end_layout
+
+\begin_layout Enumerate
+El usuario indica que es el banquero
+\end_layout
+
+\begin_layout Enumerate
+Se pregunta al banquero que desea realizar 
+\end_layout
+
+\begin_layout Enumerate
+El banquero indica que desea crear un cajero 
+\end_layout
+
+\begin_layout Enumerate
+Se le pregunta al banquero cual sera el nombre del nuevo cajero 
+\end_layout
+
+\begin_layout Enumerate
+El banquero indica que el nombre sera: ZZZ90
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Se confirma que este nombre es valido ya que cumple con el estandar ( A
+ − Z )( A − Z )( A − Z )][0 − 9] + 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al banquero cuantos billetes de 100 desea depositar inicialmente
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El banquero indica: 100
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al banquero cuantos billetes de 50 desea depositar inicialmente
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El banquero indica: 100
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al banquero cuantos billetes de 20 desea depositar inicialmente
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El banquero indica: 100
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al banquero cuantos billetes de 10 desea depositar inicialmente
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El banquero indica: 100
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al banquero cuantos billetes de 5 desea depositar inicialmente
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El banquero indica: 100
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al banquero cuantos billetes de 2 desea depositar inicialmente
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El banquero indica: 100
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al banquero cuantos billetes de 1 desea depositar inicialmente
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El banquero indica: 100
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se confirma que todos los valores introducidos son numeros enteros positivos
+ 
+\end_layout
+
+\begin_layout Enumerate
+Se crea un archivo con el nombre ZZZ90.txt
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Este almacenara el numero de billetes que tendra por denominacion 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+{Billetes de 100 : 100, Billetes de 50 : 100, Billetes de 20 : 100, Billetes
+ de 10 : 100, Billetes de 5 : 100, Billetes de 2 : 100, Billetes de 1 :
+ 100}
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Se actualiza el archivo llamado lista_cajeros.txt
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Agregando el nombre del nuevo cajero: ZZZ90
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le informa al banquero que se ha creado el cajero con exito y si desea
+ cerrar el sistema o si quiere volver al menu principal 
+\end_layout
+
+\begin_layout Enumerate
+El banquero indica que desea continuar en el sistema y regresa al menu principal
+\end_layout
+
+\begin_layout Enumerate
+El sistema le da la bienvenida al usuario y le pregunta si es un banquero
+ o un usuario corriente 
+\end_layout
+
+\begin_layout Enumerate
+El usuario indica que es el banquero 
+\end_layout
+
+\begin_layout Enumerate
+Se le pregunta que desea realizar
+\end_layout
+
+\begin_layout Enumerate
+El banquero indica que agregar billetes a un cajero existente
+\end_layout
+
+\begin_layout Enumerate
+Se le muestran al banquero los cajeros disponibles : ZZZ90 
+\end_layout
+
+\begin_layout Enumerate
+El banquero indica que agregara billetes al cajero ZZZ90 
+\end_layout
+
+\begin_layout Enumerate
+Se le pregunta al banquero cuantos billetes de 100 desea depositar 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El banquero indica: 10
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al banquero cuantos billetes de 50 desea depositar 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El banquero indica: 50
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al banquero cuantos billetes de 20 desea depositar 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El banquero indica: 20
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al banquero cuantos billetes de 10 desea depositar 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El banquero indica: 10
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al banquero cuantos billetes de 5 desea depositar 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El banquero indica: 55
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al banquero cuantos billetes de 2 desea depositar 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El banquero indica: 22
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al banquero cuantos billetes de 1 desea depositar 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El banquero indica: 1
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se confirma que todos los valores introducidos son numeros enteros positivos
+ 
+\end_layout
+
+\begin_layout Enumerate
+Se actualizan los datos almacenados en el archivo ZZZ90.txt 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sumando el numero de billetes que el banquero acaba de indicar a los billetes
+ que se encontraban en el cajero
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+{Billetes de 100 : 110, Billetes de 50 : 150, Billetes de 20 : 120, Billetes
+ de 10 : 110, Billetes de 5 : 155, Billetes de 2 : 122, Billetes de 1 :
+ 101}
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Se inidica al baquero que la transaccion fue exitosa y si desea cerrar el
+ sistema o si quiere volver al menu principal 
+\end_layout
+
+\begin_layout Enumerate
+El banquero inidica que va a cerrar el sistema 
+\end_layout
+
+\begin_layout Enumerate
+El sistema agradece al usuario por su tiempo y se cierra 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Prueba1
+\end_layout
+
+\begin_layout Enumerate
+El sistema le da la bienvenida al usuario y le pregunta si es un banquero
+ o un usuario corriente 
+\end_layout
+
+\begin_layout Enumerate
+El usuario inidica que es usuario corriente 
+\end_layout
+
+\begin_layout Enumerate
+Se confirma si hay usuarios creados consultando al archivo de lista_usuarios.txt
+\end_layout
+
+\begin_layout Enumerate
+Se le pregunta al usuario cual es su nombre de usuario 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El usuario indica que su nombre de usuario es: TT7777# 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al usuario cual es su pin 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El usuario inidica que su pin es:8976 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se confirma si los datos son correctos buscando en el almacenamiento del
+ sistema un archivo llamado TT7777#.txt 
+\end_layout
+
+\begin_layout Enumerate
+Se habre el archivo y se confirma que el pin que se introdujo es igual a
+ 8976
+\end_layout
+
+\begin_layout Enumerate
+Se le pregunta al usuario que desea realizar 
+\end_layout
+
+\begin_layout Enumerate
+El usuario indica que va a depositar dinero en la cuenta
+\end_layout
+
+\begin_layout Enumerate
+El sistema le pregunta en que cajero desea realizar la transaccion mostrando
+ los cajeros disponibles [ZZZ90]
+\end_layout
+
+\begin_layout Enumerate
+El usuario indica que utilizara el cajero ZZZ90 
+\end_layout
+
+\begin_layout Enumerate
+Se le pregunta al usuario cuantos billetes de 100 desea depositar 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El usuario indica: 5
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al usuario cuantos billetes de 50 desea depositar 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El usuario indica: 3
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al usuario cuantos billetes de 20 desea depositar 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El usuario indica: 3
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al usuario cuantos billetes de 10 desea depositar 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El usuario indica: 0
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al usuario cuantos billetes de 5 desea depositar 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El usuario indica: 1
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al usuario cuantos billetes de 2 desea depositar 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El usuario indica: 1
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al usuario cuantos billetes de 1 desea depositar 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El usuario indica: 7
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se confirman que todos los valores introducidos sean numeros enteros positivos
+ }
+\end_layout
+
+\begin_layout Enumerate
+Se actualizan los datos del archivo del usuario (TT7777#.txt)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sumando el monto de 724 al saldo del usuario (monto actual: 724)
+\end_layout
+
+\begin_layout Enumerate
+Registrando la transaccion realizada con el monto(+724), la fecha(17/4/2022),
+ la hora(23:12:38) el cajero(ZZZ90) en que se realizo la transaccion
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se actualizan los datos del archivo del cajero (ZZZ90.txt)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sumando 5 billetes de 100
+\end_layout
+
+\begin_layout Enumerate
+Sumando 3 billetes de 50
+\end_layout
+
+\begin_layout Enumerate
+Sumando 3 billetes de 20
+\end_layout
+
+\begin_layout Enumerate
+Sumando 1 billetes de 5
+\end_layout
+
+\begin_layout Enumerate
+Sumando 1 billetes de 2
+\end_layout
+
+\begin_layout Enumerate
+Sumando 7 billetes de 1
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Por lo que ahora los datos del archivo del cajero (ZZZ90.txt) son:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+{Billetes de 100 : 115, Billetes de 50 : 153, Billetes de 20 : 123, Billetes
+ de 10 : 110, Billetes de 5 : 156, Billetes de 2 : 123, Billetes de 1 :
+ 108}
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Se le inidica al usuario que la transaccion se ha realizado con exito y
+ si desea cerrar el sistema o si quiere volver al menu principal 
+\end_layout
+
+\begin_layout Enumerate
+El usuario indica que va volver al menu principal
+\end_layout
+
+\begin_layout Enumerate
+El sistema le da la bienvenida al usuario y le pregunta si es un banquero
+ o un usuario corriente 
+\end_layout
+
+\begin_layout Enumerate
+El usuario inidica que es usuario corriente 
+\end_layout
+
+\begin_layout Enumerate
+Se confirma si hay usuarios creados consultando al archivo de lista_usuarios.txt
+\end_layout
+
+\begin_layout Enumerate
+Se le pregunta al usuario cual es su nombre de usuario 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El usuario indica que su nombre de usuario es: TT7777# 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al usuario cual es su pin 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El usuario inidica que su pin es:8976 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se confirma si los datos son correctos buscando en el almacenamiento del
+ sistema un archivo llamado TT7777#.txt 
+\end_layout
+
+\begin_layout Enumerate
+Se habre el archivo y se confirma que el pin que se introdujo es igual a
+ 8976
+\end_layout
+
+\begin_layout Enumerate
+Se le pregunta al usuario que desea realizar 
+\end_layout
+
+\begin_layout Enumerate
+El usuario indica que va a retirar dinero de la cuenta
+\end_layout
+
+\begin_layout Enumerate
+El sistema le pregunta en que cajero desea realizar la transaccion mostrando
+ los cajeros disponibles [ZZZ90]
+\end_layout
+
+\begin_layout Enumerate
+El usuario indica que utilizara el cajero ZZZ90 
+\end_layout
+
+\begin_layout Enumerate
+Se le pregunta al usuario cuanto dinero desea retirar 
+\end_layout
+
+\begin_layout Enumerate
+El usuario indica que va a retirar 588
+\end_layout
+
+\begin_layout Enumerate
+Se confirma que la cantidad a retirar no es mayor al monto que el usuario
+ tiene en la cuenta 
+\end_layout
+
+\begin_layout Enumerate
+El cajero procede a buscar la minima cantidad de billetes para dar al usuario
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+La cual es:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Billetes de 100: 5
+\end_layout
+
+\begin_layout Enumerate
+Billetes de 50: 1
+\end_layout
+
+\begin_layout Enumerate
+Billetes de 20: 2
+\end_layout
+
+\begin_layout Enumerate
+Billetes de 10: 0
+\end_layout
+
+\begin_layout Enumerate
+Billetes de 5: 1
+\end_layout
+
+\begin_layout Enumerate
+Billetes de 2: 1
+\end_layout
+
+\begin_layout Enumerate
+Billetes de 1: 1
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Se actualizan los datos del archivo del usuario (TT7777#.txt)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Restando 588 al monto que tenia el usuario (monto actual: 136)
+\end_layout
+
+\begin_layout Enumerate
+Registrando la transaccion con el monto (-588), la fecha(17/4/2022), la
+ hora(23:43:27) y el cajero (ZZZ90) en que se realizo la transaccion 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se actualizan los datos del archivo del cajero (ZZZ90.txt)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Restando 5 billetes de 100
+\end_layout
+
+\begin_layout Enumerate
+Restando 1 billetes de 50
+\end_layout
+
+\begin_layout Enumerate
+Restando 2 billetes de 20
+\end_layout
+
+\begin_layout Enumerate
+Restando 1 billetes de 5
+\end_layout
+
+\begin_layout Enumerate
+Restando 1 billetes de 2
+\end_layout
+
+\begin_layout Enumerate
+Restando 1 billetes de 1
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le inidica al usuario que la transaccion se ha realizado con exito y
+ si desea cerrar el sistema o si quiere volver al menu principal 
+\end_layout
+
+\begin_layout Enumerate
+El usuario indica que va volver al menu principal
+\end_layout
+
+\begin_layout Enumerate
+El sistema le da la bienvenida al usuario y le pregunta si es un banquero
+ o un usuario corriente 
+\end_layout
+
+\begin_layout Enumerate
+El usuario inidica que es usuario corriente 
+\end_layout
+
+\begin_layout Enumerate
+Se confirma si hay usuarios creados consultando al archivo de lista_usuarios.txt
+\end_layout
+
+\begin_layout Enumerate
+Se le pregunta al usuario cual es su nombre de usuario 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El usuario indica que su nombre de usuario es: TT7777# 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al usuario cual es su pin 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El usuario inidica que su pin es:8976 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se confirma si los datos son correctos buscando en el almacenamiento del
+ sistema un archivo llamado TT7777#.txt 
+\end_layout
+
+\begin_layout Enumerate
+Se habre el archivo y se confirma que el pin que se introdujo es igual a
+ 8976
+\end_layout
+
+\begin_layout Enumerate
+Se le pregunta al usuario que desea realizar 
+\end_layout
+
+\begin_layout Enumerate
+El usuario inidica que quiere consultar su registro de transacciones 
+\end_layout
+
+\begin_layout Enumerate
+El sistema abre el archivo del usuario(TT7777#.txt)
+\end_layout
+
+\begin_layout Enumerate
+El sistema confirma que el usuario ha realizado transacciones y las muestra
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Transaccion(+724), Fecha(17/4/2022), Hora(23:12:38) Cajero(ZZZ90) 
+\end_layout
+
+\begin_layout Enumerate
+Transaccion(-588), Fecha(17/4/2022), Hora(23:43:27) Cajero (ZZZ90)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se le pregunta al usuario si desea cerrar el sistema o si quiere volver
+ al menu principal
+\end_layout
+
+\begin_layout Enumerate
+El usuario indica que va a cerrar el sistema
+\end_layout
+
+\begin_layout Enumerate
+El sistema se cierra y agradece al usuario por su tiempo
+\end_layout
+
+\end_body
+\end_document

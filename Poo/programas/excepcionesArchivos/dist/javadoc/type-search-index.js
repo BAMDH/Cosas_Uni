@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"excepcionesarchivos","l":"Archivo"},{"p":"excepcionesarchivos","l":"Estudiante"},{"p":"excepcionesarchivos","l":"Main"}];updateSearchResults();
